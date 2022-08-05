@@ -77,4 +77,13 @@ const store = createStore(reducer);
 
 // 4. Dispatch
 
+// store.dispatch({
+//     type: "ADD",
+//     payload: { id: 1, message: "Coś do zrobienia"}
+// })
+store.dispatch(addTodo("Coś do zrobienia"))
+// store.dispatch(deleteTodo(1))
+store.dispatch(updateTodo(1, "Edytowano"))
+// store.dispatch(removeAllTodos())
+
 
