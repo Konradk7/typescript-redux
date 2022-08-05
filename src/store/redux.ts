@@ -1,9 +1,12 @@
 import React from 'react';
 
+// 1. State
 const defaultState = {
     todos: [],
     example: { isChanged: false}
 }
+
+// 2. Actions
 
 const exampleAction  = {
     type: "TYP_AKCJI",
@@ -23,5 +26,25 @@ const exampleAction2 = {
 }
 const addTodo = (message: string) => ({
     type: TODOS_ACTIONS_TYPES,
-    payload: { id: Date.now(), message}
+    payload: { id: Date.now(), message }
 })
+
+const deleteTodo = (id: any) => ({
+    type: TODOS_ACTIONS_TYPES,
+    payload: id
+});
+
+const updateTodo = (id: any, message: string) => ({
+    type: TODOS_ACTIONS_TYPES,
+    payload: { id, message }
+});
+
+const removeAllTodos = () => ({
+    type: TODOS_ACTIONS_TYPES
+})
+
+// 3. Reducer
+
+const reducer = (state = defaultState, reducer: any) => {
+    
+}
